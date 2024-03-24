@@ -5,7 +5,7 @@ import './index.css'
 import { RouterProvider,createBrowserRouter } from 'react-router-dom'
 import Layout from './Layout.jsx'
 import Home from './Componenets/Home.jsx'
-
+import NewEvent from './Admin/NewEvent.jsx'
 const router=createBrowserRouter([
   {
     path:'/',
@@ -15,7 +15,10 @@ const router=createBrowserRouter([
         path:"",
         element:<Home/>
       },
-      {},
+      {
+        path:"/admin",
+        element:<NewEvent/>
+      },
 
     ]
   }

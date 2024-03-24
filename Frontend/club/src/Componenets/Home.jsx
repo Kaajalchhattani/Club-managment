@@ -11,7 +11,7 @@ function Home() {
         {
             try{
                 const res=await axios.get("http://localhost:8800/update")
-                console.log(res)
+                setup(res.data)
 
             }catch(err)
             {
@@ -22,10 +22,21 @@ function Home() {
 
     },[])
   return (
-    <div>
-      Home
+    <>
+      <h1>Upcoming events</h1>
+      <div className="Updating">
+        {up.map(updating=>(
+          <> key={updating.id}
+          <div>{updating.title}</div>
+          <div>{updating.desc}</div>
+          <div>{updating.link}</div>
+          <div>{updating.image}</div>
+          </>
 
-    </div>
+        ))}
+      </div>
+
+    </>
   )
 }
 

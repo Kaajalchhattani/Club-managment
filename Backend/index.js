@@ -1,6 +1,6 @@
 import express from "express"
 import mysql from "mysql"
-import cors from 'cors'
+import cors from "cors"
 
 const app=express()
 
@@ -24,8 +24,8 @@ app.get("/",(req,res)=>{
 app.get("/update",(req,res)=>
 {
     const q="SELECT * from `update`"
-    db.query(q,(err,data)=>
-    {
+    db.query(q,(err,data)=>{
+    
         if(err) return res.json(err)
         return res.json(data)
     })
@@ -33,20 +33,50 @@ app.get("/update",(req,res)=>
 
 app.post("/update",(req,res)=>
 {
+    console.log("a")
+    console.log(req, req.body)
     const q="Insert into `update`(`id`,`title`,`description`,`link`,`image`) values(?)"
     const values=[
-        req.body.id,
+        parseInt(req.body.id),
         req.body.title,
-        req.body.description,
+        req.body.desc,
         req.body.link,
         req.body.image
     ];
-    db.query(q,[values],(err,data)=>
-    {
-        if(err) return res.json(err)
-        return res.json("upcoming event updated")
-    })
+    console.log(values)
+    try {
+        db.query(q, [values], (err, data) => {
+            if (err) {
+                console.log("erorr occured -------------");
+                console.log(err.message)
+                return res.status(500).json({ error: err.message });
+            }
+            return res.json("upcoming event updated");
+        });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Internal Server Error" });
+    }
 
+})
+
+app.delete("/update/:id",(req,res)=>
+{
+    const updateid=Number(req.params.id)
+    const q="delete from `update` where id= ?"
+    try {
+        db.query(q, [updateid], (err, data) => {
+            if (err) {
+                console.log("erorr occured -------------");
+                console.log(err.message)
+                return res.status(500).json({ error: err.message });
+            }
+            return res.json("book has been updated");
+        });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Internal Server Error" });
+    }
 })
 
 app.listen(8800,()=>{
