@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import exampleImage from"./HD-wallpaper-technology-code-programming-programmer.jpg"
+import exampleImage from"./1677167165755.jpg"
 import axios from 'axios'
 import "./Home.css"
 
@@ -7,8 +7,13 @@ function Home() {
   return (
    <>
    <div className="float">
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil rerum sit inventore nostrum quas ipsa ab enim corporis delectus ipsum, porro reprehenderit ipsam est debitis! Ea vel ipsa culpa obcaecati quibusdam molestiae autem molestias nostrum qui cum facilis dolores, voluptatem consequuntur quasi, libero amet magni perferendis deleniti dicta quia?</div>
+   <div className="overlay-text"><h1> CTAE RROGRAMM;NG CLUB</h1>
+    <h2 className="h2"> Website To Code And Explore !!</h2></div>
     <img className="Image" src={exampleImage} alt="Example" />
+    </div>
+    <div>
+    <a href="Events.jsx"></a>
+    <a href="Members"></a>
     </div>
     </>
   )
