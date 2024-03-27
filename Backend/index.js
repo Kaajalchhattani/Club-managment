@@ -79,6 +79,33 @@ app.delete("/update/:id",(req,res)=>
     }
 })
 
+app.put("/update/:id",(req,res)=>
+{   console.log("delete")
+    const updateid=Number(req.params.id)
+    const q="update `update` set `title`=? ,`description`=?,`link`=?,`image`=? where id=?"
+    const values=[
+        
+        req.body.title,
+        req.body.desc,
+        req.body.link,
+        req.body.image
+    ];
+    try {
+        db.query(q, [...values,updateid], (err, data) => {
+            if (err) {
+                console.log(updateid)
+                console.log("erorr occured -------------");
+                console.log(err.message)
+                return res.status(500).json({ error: err.message });
+            }
+            return res.json("book has been updated successfully");
+        });
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json({ error: "Internal Server Error" });
+    }
+})
+
 app.listen(8800,()=>{
     console.log("connected to backend")
 })

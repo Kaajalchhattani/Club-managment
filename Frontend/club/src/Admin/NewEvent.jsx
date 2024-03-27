@@ -3,12 +3,15 @@ import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import "./NewEvent.css"
+import { Link } from 'react-router-dom'
+import UpdateEvent from './UpdateEvent'
 
 
 
 
 
 function NewEvent() {
+  const [up,setup]=useState([]);
     const [Event,setEvent]=useState(
         {  id:"null",
             title:"",
@@ -47,7 +50,7 @@ function NewEvent() {
             console.log(Event)
             await axios.delete("http://localhost:8800/update/"+id)
             
-            window.location.reload()
+            navigate("/")
         }
         catch(err){
             
@@ -56,7 +59,7 @@ function NewEvent() {
         }
     }
 
-    const [up,setup]=useState([]);
+
 
     useEffect(()=>
     {
@@ -147,8 +150,8 @@ function NewEvent() {
           <div>{updating.link}</div>
           <div>{updating.image}</div>
           <div>
-      <button onClick={()=>handleDelete(up.id)}>Delete</button>
-      <button>Update</button>
+      <button class="delete" onClick={()=>handleDelete(updating.id)}>Delete</button>
+      <button class="update"><Link to={`/UpdateEvent/${updating.id}`}>Update</Link></button>
       </div>
           </>
 
