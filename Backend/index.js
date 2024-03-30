@@ -35,9 +35,9 @@ app.post("/update",(req,res)=>
 {
     console.log("a")
     console.log(req, req.body)
-    const q="Insert into `update`(`id`,`title`,`description`,`link`,`image`) values(?)"
+    const q="Insert into `update`(`title`,`description`,`link`,`image`) values(?)"
     const values=[
-        parseInt(req.body.id),
+        
         req.body.title,
         req.body.desc,
         req.body.link,

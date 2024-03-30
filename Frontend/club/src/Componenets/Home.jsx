@@ -7,13 +7,15 @@ function Home() {
   return (
    <>
    <div className="float">
-   <div className="overlay-text"><h1> CTAE RROGRAMM;NG CLUB</h1>
+   <div className="overlay-text"><h1> CTAE PROGRAMM;NG CLUB</h1>
     <h2 className="h2"> Website To Code And Explore !!</h2></div>
     <img className="Image" src={exampleImage} alt="Example" />
+    
+    <div className="buttons">
+    
+    <a className="overlay-button button1" href="Members">About Us</a>
+    <a  className="overlay-button button2" href="Events.jsx">Explore</a>
     </div>
-    <div>
-    <a href="Events.jsx"></a>
-    <a href="Members"></a>
     </div>
     </>
   )

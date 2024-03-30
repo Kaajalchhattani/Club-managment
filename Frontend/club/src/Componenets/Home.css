@@ -23,3 +23,26 @@
     z-index: 1;
     text-align: center;
   }
+  .overlay-button {
+  position: absolute;
+  padding: 10px 20px ;
+  background-color: #318CE7 ;
+  text-align: center;
+  width:70px;
+  color: whitesmoke;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+.button1 {
+  top: 80%;
+  left: 180px; /* Adjust the left position for Button 1 */
+  transform: translate(1, -50%);
+}
+
+.button2 {
+  top: 80%;
+  right: 180px; /* Adjust the right position for Button 2 */
+  transform: translate(0, -50%);
+}

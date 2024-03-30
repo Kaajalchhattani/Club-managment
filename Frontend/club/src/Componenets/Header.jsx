@@ -9,7 +9,7 @@ function Header() {
        <div className='logo'><a href>Logo</a></div>
        <div className='events'>
        <NavLink exact to="/" activeClassName="active" className="item">Home</NavLink>
-       <NavLink exact to="/Footer" activeClassName="active" className="item">Events</NavLink>
+       <NavLink exact to="/Events" activeClassName="active" className="item">Events</NavLink>
        <NavLink exact to="/Footer" activeClassName="active" className="item">Blogs</NavLink>
        <NavLink exact to="/Footer" activeClassName="active" className="item">Projects</NavLink>
        <NavLink exact to="/Footer" activeClassName="active" className="item">Members</NavLink>

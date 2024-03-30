@@ -12,8 +12,9 @@ import UpdateEvent from './UpdateEvent'
 
 function NewEvent() {
   const [up,setup]=useState([]);
+  console.log(up);
     const [Event,setEvent]=useState(
-        {  id:"null",
+        {  
             title:"",
             desc:"",
             link:"",
@@ -36,7 +37,7 @@ function NewEvent() {
             console.log(Event)
             await axios.post("http://localhost:8800/update",Event)
             
-            navigate("/")
+            navigate("/admin")
         }
         catch(err){
             print(err)
@@ -85,15 +86,7 @@ function NewEvent() {
       <h2>Add NewEvent</h2>
       <div className='form' >
         
-        <div className='input'>
-    <label>Id : </label>
-      <input 
-      type="number" 
-      placeholder='id'
-      onChange={handleChange}
-      name='id'/>
-     
-        </div>
+   
 
         <div className='input'>
         <label>Title : </label>
@@ -143,13 +136,17 @@ function NewEvent() {
  
       
       <div className="Updating">
-        {up.map(updating=>(
-          <> key={updating.id}
+      
+        {
+        up.map(updating=>(
+          <> 
+          key={updating.id}
           <div>{updating.title}</div>
-          <div>{updating.desc}</div>
+          <div>desc={updating.description}</div>
           <div>{updating.link}</div>
           <div>{updating.image}</div>
           <div>
+          
       <button class="delete" onClick={()=>handleDelete(updating.id)}>Delete</button>
       <button class="update"><Link to={`/UpdateEvent/${updating.id}`}>Update</Link></button>
       </div>

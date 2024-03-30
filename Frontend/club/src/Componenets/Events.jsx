@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-
+import "./Event.css"
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 function Events() {
     const [up,setup]=useState([]);
@@ -23,14 +24,17 @@ function Events() {
     },[])
   return (
     <>
-      <h1>Upcoming events</h1>
-      <div className="Updating">
+      <h2>Upcoming events</h2>
+      <div >
         {up.map(updating=>(
-          <> key={updating.id}
-          <div>{updating.title}</div>
-          <div>{updating.desc}</div>
-          <div>{updating.link}</div>
-          <div>{updating.image}</div>
+          <>
+          <div className="Updating" >
+          <img className='image' src={updating.image}></img>
+          <div className='title'>{updating.title}</div>
+          <div className='desc'>{updating.description}</div>
+          <a className='link' href={updating.link}>Link</a>
+          
+          </div> 
           </>
 
         ))}
