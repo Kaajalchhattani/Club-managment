@@ -140,11 +140,13 @@ function NewEvent() {
         {
         up.map(updating=>(
           <> 
+          <div class="Makerow">
           key={updating.id}
-          <div>{updating.title}</div>
-          <div>desc={updating.description}</div>
-          <div>{updating.link}</div>
-          <div>{updating.image}</div>
+          <div>Title={updating.title}</div>
+          <div>Desc={updating.description}</div>
+          <div>Link={updating.link}</div>
+          <div>Image={updating.image}</div>
+          </div>
           <div>
           
       <button class="delete" onClick={()=>handleDelete(updating.id)}>Delete</button>

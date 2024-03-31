@@ -25,10 +25,10 @@ function Events() {
   return (
     <>
       <h2>Upcoming events</h2>
-      <div >
+      <div className="full" >
         {up.map(updating=>(
           <>
-          <div className="Updating" >
+          <div className="UpdatingEvents" >
           <img className='image' src={updating.image}></img>
           <div className='title'>{updating.title}</div>
           <div className='desc'>{updating.description}</div>
