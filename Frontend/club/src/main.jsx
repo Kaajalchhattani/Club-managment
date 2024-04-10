@@ -8,6 +8,7 @@ import Home from './Componenets/Home.jsx'
 import NewEvent from './Admin/NewEvent.jsx'
 import UpdateEvent from './Admin/UpdateEvent.jsx'
 import Events from './Componenets/Events.jsx'
+import Login from './Componenets/Login.jsx'
 const router=createBrowserRouter([
   {
     path:'/',
@@ -28,6 +29,10 @@ const router=createBrowserRouter([
       {
         path:"/Events",
         element:<Events/>
+      },
+      {
+        path:"/Login",
+        element:<Login/>
       }
 
     ]
