@@ -2,7 +2,7 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import "./NewEvent.css"
+
 import { Link } from 'react-router-dom'
 
 
@@ -10,15 +10,14 @@ import { Link } from 'react-router-dom'
 
 
 
-function NewEvent() {
+function NewMembers() {
   const [up,setup]=useState([]);
   console.log(up);
     const [Event,setEvent]=useState(
         {  
-            title:"",
-            desc:"",
-            link:"",
-            image:"",
+            Name:"",
+            
+            Image:"",
 
 
         }
@@ -35,9 +34,9 @@ function NewEvent() {
         e.preventDefault()
         try{
             console.log(Event)
-            await axios.post("http://localhost:8800/update",Event)
+            await axios.post("http://localhost:8800/members",Event)
             
-            navigate("/events")
+            navigate("/members")
         }
         catch(err){
             print(err)
@@ -49,9 +48,9 @@ function NewEvent() {
     const handleDelete= async (id)=>{
         try{
             console.log(Event)
-            await axios.delete("http://localhost:8800/update/"+id)
+            await axios.delete("http://localhost:8800/members/"+id)
             
-            navigate("/admin")
+            navigate("/")
         }
         catch(err){
             
@@ -67,7 +66,7 @@ function NewEvent() {
         const fetchUpdate=async()=>
         {
             try{
-                const res=await axios.get("http://localhost:8800/update")
+                const res=await axios.get("http://localhost:8800/members")
                 setup(res.data)
 
             }catch(err)
@@ -82,53 +81,34 @@ function NewEvent() {
     console.log(Event);
   return (
     <>
-     <a className="Back"href="./adminfirst">Back to Portal</a>
     <div className='event'>
-      <h2>Add NewEvent</h2>
+      <h2>Add Member</h2>
       <div className='form' >
         
    
 
         <div className='input'>
-        <label>Title : </label>
+        <label>Name : </label>
       <input
       type="text"
-      placeholder='title'
+      placeholder='Name'
       onChange={handleChange}
-      name='title'/>
+      name='Name'/>
+     </div>
      
-      </div>
-
-      <div className='input'>
-        <label>Description : </label>
-      <textarea type="textarea"
-      placeholder='desc'
-      onChange={handleChange}
-      name='desc'/>
-      
-      </div>
-
-      <div className='input'>
-        <label>Link : </label>
-      <input type="text"
-      placeholder='link'
-      onChange={handleChange}
-      name='link'/>
-     
-      </div>
 
       <div className='input'>
         <label>Image : </label>
       <input type="text"
-      placeholder='image'
+      placeholder='Image'
       onChange={handleChange}
-      name='image'/>
+      name='Image'/>
      
       </div>
 
      
     
-<button className="button-1"onClick={handleClick}>Add</button>
+<button onClick={handleClick}>Add</button>
 </div>
 </div>
 
@@ -143,16 +123,13 @@ function NewEvent() {
           <> 
           <div class="Makerow">
           key={updating.id}
-          <div>Title={updating.title}</div>
-          <div>Desc={updating.description}</div>
-          <div>Link={updating.link}</div>
-          <div>Image={updating.image}</div>
+          <div>Title={updating.Name}</div>
+      
+          <div>Image={updating.Image}</div>
           </div>
           <div>
           
-      <button class="delete" onClick={()=>handleDelete(updating.id)}>Delete</button>
-      <button class="update"><Link to={`/UpdateEvent/${updating.id}`}>Update</Link></button>
-      </div>
+    </div>
           </>
 
         ))}
@@ -165,4 +142,4 @@ function NewEvent() {
         }
 
 
-export default NewEvent
+export default NewMembers

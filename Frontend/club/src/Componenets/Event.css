@@ -1,48 +1,84 @@
-.full{
-    display:flex;
 
+
+.events-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
 }
-.UpdatingEvents{
+
+.events-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+}
+
+.event-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 400px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgb(67, 64, 64); /* Light gray background */
+    border-radius: 8px;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
     
-       position:relative;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        padding: 20px;
-        margin: 5px;
-       
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-         width:213px;
-         height:350px;
-         
-    }
-    .image {
-        width: 213px;
-        height:100px;
-        
-        border-radius: 8px;
-        margin-bottom: 15px;
-    }
-    .title {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        font-weight: 600;
-    }
-    .desc {
-        margin-bottom: 40px;
-        font-size: 1 rem;
-    }
-    .link {
-        position: absolute;
-         bottom: 25px;
-        margin-left:20px ;
-        margin-top:200px ;
-        padding: 10px 70px ;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 7px;
-        cursor: pointer;
-       
-            
-       
-    }
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}
+
+.event-image {
+    width: 290px;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.event-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: floralwhite;
+    margin-top: 10px;
+}
+
+.event-description {
+    font-size: 14px;
+    color: lightcyan;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    padding: 10px;
+}
+
+.event-link {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    margin-top: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

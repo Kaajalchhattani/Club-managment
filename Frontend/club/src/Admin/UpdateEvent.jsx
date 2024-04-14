@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "./Update.css"
 
 function UpdateEvent() {
     
@@ -33,7 +34,7 @@ function UpdateEvent() {
             console.log(Event)
             await axios.put("http://localhost:8800/update/"+updateid , Event)
             
-            navigate("/")
+            navigate("/admin")
         }
         catch(err){
             print(err)
@@ -46,6 +47,7 @@ function UpdateEvent() {
   return (
    
      <>
+     
     <div className='event'>
       <h2>Update event</h2>
       <div className='form' >
@@ -88,8 +90,9 @@ function UpdateEvent() {
       name='image'/>
      
       </div>
+      
       </div>
-      <button className='button' onClick={handleClick}>Update</button>
+      <button className='button-2' onClick={handleClick}>Update</button>
       </div>
     </>
   )

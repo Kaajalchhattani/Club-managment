@@ -1,13 +1,10 @@
-body{
-    margin: 0;
-    padding:0;
-}
+
 .header{
    
     display:flex;
     justify-content:space-between;
     padding:5px;
-    margin:5px;
+    margin:5x;
     
 
 }
@@ -15,6 +12,9 @@ body{
     display:flex;
    
    
+}
+.logo{
+    margin-left: 70px;
 }
 
 .item

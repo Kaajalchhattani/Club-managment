@@ -1,0 +1,58 @@
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.post-card {
+    width: 100%;
+    max-width: 800px; /* Adjust width as per your design needs */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.post-image {
+    width: 100%;
+    height: auto; /* Keeps image aspect ratio intact */
+    max-height: 400px; /* Limit the image height */
+    object-fit: cover; /* Ensures the image covers the area properly */
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-content h2 {
+    margin-top: 0;
+}
+
+.post-content p {
+    white-space: pre-wrap; /* Preserves spaces and line breaks */
+    word-wrap: break-word; /* Ensures text does not overflow */
+    margin: 10px 0;
+}
+
+.author {
+    font-style: italic;
+    color: #555;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

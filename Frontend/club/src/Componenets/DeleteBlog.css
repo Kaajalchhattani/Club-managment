@@ -1,0 +1,42 @@
+.Updating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .Makerow {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 2fr 100px; /* Adjusted to provide more space for potentially larger fields */
+    align-items: center;
+    
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    width: 90%; /* Adjust based on preference */
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds shadow for better depth */
+  }
+  
+  .Makerow div {
+    padding: 8px;
+    text-align: left; /* Ensures text aligns nicely in each cell */
+    overflow: hidden; /* Prevents overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis if text overflows */
+    white-space: nowrap; /* Keeps text in a single line */
+  }
+  
+  .delete {
+    padding: 10px 20px;
+    background-color: #ff4d4d; /* Red color for delete button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for the button */
+  }
+  
+  .delete:hover {
+    background-color: #cc0000; /* Darker red on hover for better user feedback */
+  }
+  

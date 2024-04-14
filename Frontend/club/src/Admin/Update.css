@@ -1,0 +1,46 @@
+.event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Use the full height of the viewport */
+   /* Light gray background */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust width as per your design */
+    max-width: 500px; /* Maximum width of the form */
+     /* White background for the form */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .input {
+    margin-bottom: 20px; /* Space between inputs */
+  }
+  
+  .input label {
+    display: block; /* Ensure the label is on a new line */
+    margin-bottom: 8px; /* Small space between label and input field */
+    color: #333; /* Dark grey color for text for better readability */
+    font-weight: bold; /* Make labels bold */
+  }
+  
+  .input input,
+  .input textarea {
+    width: 100%; /* Full width of the container */
+    padding: 8px; /* Padding inside the inputs */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded borders for inputs */
+  }
+  
+ button
+ {
+    margin: 0px;
+    padding: 10;
+ }

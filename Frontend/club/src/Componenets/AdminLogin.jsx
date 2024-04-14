@@ -1,12 +1,13 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
 import { useNavigate} from "react-router-dom";
-import "./Login.css"
+
+import "./AdminLogin.css"
 
 
 
 
-function Login() {
+function AdminLogin() {
   const[userName,setuserName]=useState("");
   const[password,setpassword]=useState("");
   const[user,setuser]=useState("");
@@ -17,7 +18,7 @@ axios.defaults.withCredentials=true;
 
   const register=async (e)=>{
     e.preventDefault()
-    axios.post('http://localhost:8800/user',
+    axios.post('http://localhost:8800/admin',
     {username:userName,password:password})
     .then((response)=>{
       console.log(response);
@@ -27,7 +28,7 @@ const navigate=useNavigate()
 
 const login=async (e)=>{
   e.preventDefault()
-  axios.post('http://localhost:8800/login',
+  axios.post('http://localhost:8800/adminlogin',
   {username:user,password:pass})
   .then((response)=>{
     if(response.data.message)
@@ -46,14 +47,14 @@ const login=async (e)=>{
 
 useEffect(()=>
 {
-  axios.get('http://localhost:8800/login')
+  axios.get('http://localhost:8800/adminlogin')
   .then((response)=>{
     if(response.data.loggedIn==true){
     setLoginStatus(response.data.user[0].user)
     console.log(response.data.user[0].user);
     
   setTimeout(()=>{
-    navigate('/Home')
+    navigate('/adminfirst')
     },500)}
    
   })
@@ -65,7 +66,7 @@ useEffect(()=>
 
       <div className="Login">
         <div className="login-form">
-        <h1 className="h1">Login</h1>
+        <h1>Admin-Login</h1>
         <label>College Id</label>
         <input type="text" placeholder="Username.. " onChange={(e)=>{
           setuser(e.target.value);
@@ -74,7 +75,7 @@ useEffect(()=>
         <input type="password" placeholder="Placeholder.." onChange={(e)=>{
           setpass(e.target.value);
         }}/>
-        <button className="button"onClick={login}>Login</button>
+        <button className=".button-3" onClick={login}>Login</button>
         </div>
 
       </div>
@@ -84,4 +85,4 @@ useEffect(()=>
   )
 }
 
-export default Login
+export default AdminLogin
