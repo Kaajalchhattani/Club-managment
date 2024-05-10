@@ -21,7 +21,7 @@ const db=mysql.createConnection(
 app.use(express.json())
 app.use(cors({
     origin:["http://localhost:5173"],
-    methods:["GET","POST","DELETE"],
+    methods:["GET","POST","DELETE","UPDATE"],
     credentials:true
 }))
 app.use(cookieParser())
@@ -235,7 +235,7 @@ app.get("/Blog",(req,res)=>
 
 app.post("/Blog",(req,res)=>
 {
-    console.log("a")
+    console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
     console.log(req, req.body)
     const q="Insert into posts(`title`,`content`,`author`,`imagelink`) values(?)"
     const values=[
@@ -360,7 +360,7 @@ app.post("/adminlogin",(req,res)=>
     const password=req.body.password;
 
     db.query(
-        "Select * from admin where admin=?;",
+        "Select * from admin where user=?;",
         [username],
         (err,result)=>{
             if(err)

@@ -141,8 +141,7 @@ function NewEvent() {
         {
         up.map(updating=>(
           <> 
-          <div class="Makerow">
-          key={updating.id}
+          <div class="Makerow" key={updating.id}>
           <div>Title={updating.title}</div>
           <div>Desc={updating.description}</div>
           <div>Link={updating.link}</div>

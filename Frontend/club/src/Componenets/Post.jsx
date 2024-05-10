@@ -27,8 +27,10 @@ function Post() {
       
       <div className="blog-grid">
         {posts.map((post) => (
+          
           <div key={post.id} className="post-card">
-            <img src={post.imagelink || defaultImage} alt={post.title || "Default Image"} className="post-image"/>
+            {console.log(post)}
+            <img src={post.imagelink} alt={post.title || "Default Image"} className="post-image"/>
             <h3>{post.title}</h3>
             <p>{post.content.substring(0, 20)}...</p>
             <Link to={`/PostBlog/${post.id}`} className="read-more">Read More</Link>

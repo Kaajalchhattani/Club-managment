@@ -6,7 +6,7 @@ function Header() {
     <>
   
       <div className="header">
-       <div className='logo'><a href>Logo</a></div>
+       <div className='logo'><a href="/Home">CodeCraze</a></div>
        <div className='events'>
        <NavLink exact to="/Home" activeClassName="active" className="item">Home</NavLink>
        <NavLink exact to="/Events" activeClassName="active" className="item">Events</NavLink>

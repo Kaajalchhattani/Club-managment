@@ -26,7 +26,7 @@ axios.defaults.withCredentials=true;
     })
       // Prevent the default form submit action
     console.log('Registered!!!');
-   navigate("/Login")
+   navigate("/AdminLogin")
 }
 const navigate=useNavigate();
 

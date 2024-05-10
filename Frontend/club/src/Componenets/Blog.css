@@ -1,69 +1,75 @@
 
   
-  .event {
+  .event2 {
+   
     margin-left:30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 400px; /* Maximum width of the form */
+    max-width: 400px; 
   
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
-  .title {
-    color:floralwhite;
+  .event2 p{
+    font-weight: 9;
+  }
+  .title2 {
+    color:white;
     text-align: center;
     font-size: 24px;
     color: #333;
     width: 100%;
-    margin-bottom: 20px; /* Space below the title */
+    margin-bottom: 20px; 
   }
   
-  .form {
+  .form2 {
     width: 100%;
   }
   
-  .input {
+  .input2 {
+    color: white;
     width: 100%;
     margin-bottom: 15px;
   }
   
-  .input label {
+  .input2 label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+   
   }
   
-  .input input,
-  .input textarea {
+  .input2 input,
+  .input2 textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   
-  .button {
+  .button-5 {
     padding:0;
     margin:0;
-   /* Ensures the button aligns with form elements */
-    display: flex;
+   
+   
     justify-content: center;
+    align-items: center;
   }
   
-  .button {
+  .button-5 {
+   margin-left: 150px;
     padding: 10px 20px;
     color: white;
     background-color: #007BFF;
-    border: none;
+    border-style:ridge;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
-  .button button:hover {
+  .button-5 button:hover {
     background-color: #0056b3;
   }
   

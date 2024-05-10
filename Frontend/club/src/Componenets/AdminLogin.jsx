@@ -79,7 +79,7 @@ useEffect(()=>
         </div>
 
       </div>
-            <h2>{LoginStatus}</h2>
+            <h2>Welcome {LoginStatus}</h2>
 
     </div>
   )

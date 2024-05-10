@@ -23,7 +23,7 @@ axios.defaults.withCredentials=true;
     .then((response)=>{
       console.log(response);
     })
-      // Prevent the default form submit action
+      
     console.log('Registered!!!');
    navigate("/Login")
 }
@@ -60,7 +60,7 @@ useEffect(()=>
 },[])
 
   return (
-    <div>
+    <div className="Register-full">
       <div className="Register">
         <div>
         <h1 class="form">Register</h1>
@@ -96,6 +96,7 @@ useEffect(()=>
         <div>
         </div>
         <button className="signin" onClick={register}>Register</button>
+        <br></br>
         
      
        Already a User Please  <Link   to="/Login">Sign Up</Link>

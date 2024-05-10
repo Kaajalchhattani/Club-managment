@@ -20,7 +20,7 @@ function Events() {
 
     return (
       <div className='Hi'>
-     
+       <p className="Header1"> Upcoming Events</p>
         <div className="events-wrapper">
          
             <button className="scroll-button left" onClick={() => scroll('left')}>&lt;</button>

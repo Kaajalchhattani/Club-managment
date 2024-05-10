@@ -4,29 +4,32 @@ import "./Footer.css"
 
 function Footer() {
   return (
-    <>
-    <div className="whole">
-      <hr></hr>
-      <div className="container">
-        
-        <div className="Logo">Logo</div>
-        <div className="division">
-          <div className="first">
-            <div className='Link-item'>Links</div>
-            <NavLink exact to="/" activeClassName="active" className="item">Home</NavLink>
-            <NavLink exact to="/footesr" activeClassName="active" className="item">Blog</NavLink>
-            <NavLink exact to="/footers" activeClassName="active" className="item">ContactUs</NavLink>
+    
+        <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-logo">CodeCraze</div>
+        <div className="footer-sections">
+         
+           
+            <ul className="section-list">
+            <li><NavLink exact to="/Home" activeClassName="active" className="section-link">Home</NavLink></li>
+            <li><NavLink exact to="/Post" activeClassName="active" className="section-link">Blog</NavLink></li>
+            <li><NavLink exact to="/footers" activeClassName="active" className="section-link">ContactUs</NavLink></li>
+          </ul>
           </div>
           <div className="sec">
-          <div className='Link-item'>Contacts</div>
-            <div className="second-item">Mobile:75*******7</div>
-            <div className="second-item">Email:Kaajalchhattani@gmail.com</div>
-            <div className="second-item">Address:63/73 HeeraPath,Mansarovar,Jaipur,Rajasthan</div>
+          <div className="footer-section">
+            <h3 className='section-title'>Contacts</h3>
+            <ul className="section-list">
+              <li className="contact-info">Mobile: 75*******7</li>
+              <li className="contact-info">Email: Kaajalchhattani@gmail.com</li>
+              <li className="contact-info">Address: 63/73 HeeraPath, Mansarovar, Jaipur, Rajasthan</li>
+            </ul>
           </div>
-          </div>
+        </div>
       </div>
-</div>
-    </>
+    </footer>
+    
   )
 }
 

@@ -37,6 +37,7 @@ function Blog() {
     const handleClick= async (e)=>{
         e.preventDefault()
         try{
+            console.log("Heloooo")
             console.log(Event)
             await axios.post("http://localhost:8800/Blog",Event)
             
@@ -85,16 +86,17 @@ function Blog() {
 
     console.log(Event);
   return (
-    <div className="hello">
+    
    
-      <div className='event'>
+      <div className='event2'>
         
-      <div className='title'>Put Idea and Imagination</div>
-      <div className='form' >
+      <p>Put Your Idea and Imagination</p>
+
+      <div className='form2' >
         
    
 
-        <div className='input'>
+        <div className='input2'>
         <label>Title : </label>
       <input
       type="text"
@@ -104,7 +106,7 @@ function Blog() {
      
       </div>
 
-      <div className='input'>
+      <div className='input2'>
         <label>Content : </label>
       <textarea type="textarea"
       placeholder='desc'
@@ -114,7 +116,7 @@ function Blog() {
       </div>
 
 
-      <div className='input'>
+      <div className='input2'>
         <label>Author: </label>
       <input type="text"
       placeholder='author'
@@ -124,12 +126,12 @@ function Blog() {
       </div>
 
       
-      <div className='input'>
+      <div className='input2'>
         <label>Image Link: </label>
       <input type="text"
       placeholder='Provide Link...'
       onChange={handleChange}
-      name='ImageLink'/>
+      name='imagelink'/>
      </div>
 
 <button className ="button-5" onClick={handleClick}>Add</button>
@@ -138,7 +140,7 @@ function Blog() {
 
 
 
-</div>
+
      
 
 
