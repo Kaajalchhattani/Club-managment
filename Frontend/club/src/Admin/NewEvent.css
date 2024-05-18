@@ -1,11 +1,11 @@
-.event {
+.event1 {
     display: flex; /* Uses flexbox to align children */
     justify-content: center; /* Centers children horizontally */
     align-items: center; /* Centers children vertically */
     min-height: 100vh; 
   }
   
-  .form {
+  .form1 {
     width: 50%; /* Adjust this value to your preference for form width */
     padding: 20px; /* Provides padding inside the form */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for better visibility */
@@ -13,22 +13,23 @@
     border-radius: 8px; /* Rounds the corners of the form */
   }
   
-  .input {
+  .input1 {
     margin-bottom: 20px; /* Adds space between form fields */
   }
   
-  .input label {
+  .input1 label {
     display: block; /* Ensures the label is on its own line */
-    margin-bottom: 5px; /* Space between label and input field */
+    margin-bottom: 5px; 
+    color:white/* Space between label and input field */
   }
   
-  .input input, .input textarea {
+  .input1 input, .input textarea {
     width: 100%; /* Makes input take full width of the form */
     padding: 10px; /* Padding inside the input */
     border: 1px solid #ccc; /* Border for the inputs */
     border-radius: 4px; /* Rounds the corners of the input fields */
   }
   
-.button-1{
+.button-11{
     margin-right:60px;
 }
