@@ -28,6 +28,13 @@ function Register() {
 
   const register = async (e) => {
     e.preventDefault();
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      setUserName("");
+      setPassword("");
+      setEmail("");
+      return;
+    }
     if (!validateUserName(userName)) {
       alert("Please enter a valid College ID (e.g., 2020/CTAE/274).");
       setUserName("");
@@ -35,15 +42,11 @@ function Register() {
       setEmail("");
       return;
     }
-    if (!validateEmail(email)) {
-      alert("Please enter a valid email address.");
-      setEmail("");
-      return;
-    }
+   
     axios.post("http://localhost:8800/user", { username: userName, password: password, email: email }).then((response) => {
       console.log(response);
     });
-    console.log("Registered!!!");
+    alert("Registered!!!");
     navigate("/Login");
   };
 
