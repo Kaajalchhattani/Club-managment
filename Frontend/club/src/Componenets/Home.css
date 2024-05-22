@@ -18,6 +18,7 @@
 
   
 }
+
 .overlay-text {
   position: absolute;
   top: 5%;
@@ -128,6 +129,7 @@ color: rgb(246, 255, 246);
 border-radius: 10px;
 transition: transform 0.3s ease-in-out;
 overflow: hidden; /* Hide overflowing text */
+background-color:#646cffaa;
 }
 
 .containerr p {
@@ -135,9 +137,17 @@ margin: 0; /* Remove default margin */
 padding: 10px;
 font-size:19px /* Add padding to separate text from container edges */
 }
+.card-title{
+  color: #00BFFF;
+  font-size: medium;
 
-.containerr:hover {
+}
+.col-sm-6:hover {
 transform: translateY(-10px);
+}
+.card-body {
+  border-width: 2;
+  border-color: white;
 }
 .buttons {
 position: relative; /* Set position relative for absolute positioning */

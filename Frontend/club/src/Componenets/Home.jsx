@@ -50,7 +50,42 @@ function Home() {
       </section>
       <section className="glimpse-section">
   <h2>Glimpse into Our Community</h2>
-  <div className="containerr" style={{ backgroundColor: '#ff6347' }}>
+  <div class="row" style = {{display:'flex' , flexDirection:'row', gap:3}}>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Make new friends</h5>
+        <p class="card-text">Find a community discover new connections, share experiences, and build lasting friendships. You'll become part of a tight-knit group of friends with diverse interests.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Learn on a project team</h5>
+        <p class="card-text">You'll hit the ground running by learning new programming skills, receiving mentorship from industry engineers, and contributing to a real product for real users.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Engage with industry professionals</h5>
+        <p class="card-text">Participate in seminars, workshops, and networking events. Connect with industry leaders and expand your professional network!</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Gain leadership experience</h5>
+        <p class="card-text">Take on new roles and gain invaluable leadership experience by becoming a project manager or a vice president and giving back to our community.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  {/* <div className="containerr" >
   Make new friends
     <p>Find a community discover new connections, share experiences, and build lasting friendships. You'll become part of a tight-knit group of friends with diverse interests.</p>
   </div>
@@ -69,7 +104,7 @@ function Home() {
   <div className="containerr" style={{ backgroundColor: '#9370db' }}>
   Interact with community
     <p>Join us for exhilarating volunteer experiences with student groups, fostering connections within the CTAE community!</p>
-  </div>
+  </div> */}
 </section>
 
     </>
