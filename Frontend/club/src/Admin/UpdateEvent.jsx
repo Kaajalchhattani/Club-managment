@@ -34,7 +34,7 @@ function UpdateEvent() {
             console.log(Event)
             await axios.put("http://localhost:8800/update/"+updateid , Event)
             
-            navigate("/admin")
+            navigate("/Events")
         }
         catch(err){
             print(err)
@@ -54,7 +54,7 @@ function UpdateEvent() {
         
     
 
-        <div className='input'>
+        <div className='input3'>
         <label>Title : </label>
       <input
       type="text"
@@ -64,7 +64,7 @@ function UpdateEvent() {
      
       </div>
 
-      <div className='input'>
+      <div className='input3'>
         <label>Description : </label>
       <textarea type="textarea"
       placeholder='desc'
@@ -73,7 +73,7 @@ function UpdateEvent() {
       
       </div>
 
-      <div className='input'>
+      <div className='input3'>
         <label>Link : </label>
       <input type="text"
       placeholder='link'
@@ -82,7 +82,7 @@ function UpdateEvent() {
      
       </div>
 
-      <div className='input'>
+      <div className='input3'>
         <label>Image : </label>
       <input type="text"
       placeholder='image'

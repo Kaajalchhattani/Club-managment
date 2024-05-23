@@ -1,65 +1,69 @@
-.Register{
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    margin-left: 25%;
-    margin-right: 25%;
+/* AdminRegister.css */
+
+.register-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.Register {
-    width: 100%;
-    max-width: 400px;
+    height: 100vh;
+  }
+  
+  .register-form {
+    width: 400px;
+    background-color: #0b0b0b;
     padding: 20px;
-   
-    
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-}
-.login-form {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
     margin-bottom: 15px;
-}
-
-
-.login-form  label {
+  }
+  
+  .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: whitesmoke;
-    
-}
-
-.login-form  input {
+    font-weight: bold;
+  }
+  
+  .form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-.signin{
-    display: flex;
-    gap: 10px; /* Adjusts the space between the buttons */
-}
-
-.signin{
-    flex: 1; /* Makes both buttons take equal space */
-    background-color: #5c67f2;
-    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .signin-button {
+    width: 100%;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.signin {
-    background-color: #4a54e1;
-}
-@media (max-width: 600px) {
-    .Register {
-        margin: 20px;
-    }
-}
+  }
+  
+  .signin-button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  p a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  

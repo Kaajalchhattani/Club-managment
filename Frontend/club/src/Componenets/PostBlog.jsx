@@ -31,7 +31,7 @@ function PostBlog() {
               ))}</p>
                         <p className="author">By: {post.author}</p>
                     </div>
-                    <Link className="back-button" to="/Post">Back to Home</Link>
+                    <Link className="back-button" to="/Post">Back to Main</Link>
                 </div>
             ) : (
                 <p>Loading...</p>

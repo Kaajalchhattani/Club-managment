@@ -19,6 +19,7 @@ import AdminPage from './Componenets/AdminPage.jsx'
 import DeleteBlog from './Componenets/DeleteBlog.jsx'
 import Members from './Componenets/Members.jsx'
 import NewMembers from './Componenets/NewMembers.jsx'
+import About from './Componenets/About.jsx'
 const router=createBrowserRouter([
   
   {
@@ -88,7 +89,10 @@ const router=createBrowserRouter([
         path:"/members",
         element:<Members/>
       },
-      
+      {
+        path:"/About",
+        element:<About/>
+      },
 
 
     ]

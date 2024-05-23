@@ -1,0 +1,67 @@
+/* NewMember.css */
+
+.back-link {
+    display: block;
+    margin-bottom: 10px;
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .back-link:hover {
+    text-decoration: none;
+  }
+  
+  .new-members {
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  .new-members h2 {
+    margin-top: 30;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    margin-bottom: 20px;
+  }
+  
+  .input label {
+    font-weight: bold;
+  }
+  
+  .input input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .updating {
+    margin-top: 80px;
+  }
+  
+  .member-row {
+    margin-bottom: 10px;
+  }
+  
+  .member-row div {
+    margin-bottom: 5px;
+  }
+  
+  .member-row button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .member-row button:hover {
+    background-color: darkred;
+  }
+  

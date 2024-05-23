@@ -1,0 +1,82 @@
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .about-club {
+    background-color: #000000;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+
+  }
+  
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slideshowSlider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide img { /* Added this rule to make images fit the width of the screen */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire slide area */
+  }
+  
+  .slideshowDots {
+    position: absolute;
+    bottom: 10px; /* Adjusted to align dots closer to the slideshow */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slideshowDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .slideshowDot.active {
+    background-color: #333;
+  }
+  
+  .join-club {
+    background-color: #0f0f0f;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .join-club button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }

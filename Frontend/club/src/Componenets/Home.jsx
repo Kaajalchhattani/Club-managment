@@ -24,7 +24,7 @@ function Home() {
           <img className="Image" src={downloaddImage} alt="Example" />
         </div>
         <div className="buttons">
-          <a className="overlay-button button1" href="Members">About Us</a>
+          <a className="overlay-button button1" href="/About">About Us</a>
           <a className="overlay-button button2" href="/Events">Explore</a>
         </div>
         <div className="buttons">

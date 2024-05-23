@@ -1,35 +1,98 @@
-.event1 {
-    display: flex; /* Uses flexbox to align children */
-    justify-content: center; /* Centers children horizontally */
-    align-items: center; /* Centers children vertically */
-    min-height: 100vh; 
-  }
-  
-  .form1 {
-    width: 50%; /* Adjust this value to your preference for form width */
-    padding: 20px; /* Provides padding inside the form */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for better visibility */
-     /* Background color for the form */
-    border-radius: 8px; /* Rounds the corners of the form */
-  }
-  
-  .input1 {
-    margin-bottom: 20px; /* Adds space between form fields */
-  }
-  
-  .input1 label {
-    display: block; /* Ensures the label is on its own line */
-    margin-bottom: 5px; 
-    color:white/* Space between label and input field */
-  }
-  
-  .input1 input, .input textarea {
-    width: 100%; /* Makes input take full width of the form */
-    padding: 10px; /* Padding inside the input */
-    border: 1px solid #ccc; /* Border for the inputs */
-    border-radius: 4px; /* Rounds the corners of the input fields */
-  }
-  
-.button-11{
-    margin-right:60px;
+/* NewEvent.css */
+
+.back-link {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.event-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.event-form {
+  background-color: #0a0a0a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input2 {
+  margin-bottom: 15px;
+}
+
+.input2 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color:#ccc;
+}
+
+.input2 input,
+.input2 textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #040000;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.updating-container {
+  margin-top: 30px;
+}
+
+.update-row {
+  background-color: #050303;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.update-row div {
+  margin-bottom: 5px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: #ccc;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #bb2d3b;
+}
+
+.update-button a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.update-button a:hover {
+  background-color: #0056b3;
 }
